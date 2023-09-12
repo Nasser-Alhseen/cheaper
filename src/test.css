@@ -1,0 +1,32 @@
+.glue-element {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.glue-element:hover {
+    border-color: #ff9900;
+}
+
+.glue-element.glued {
+    border-color: #ff9900;
+}
+
+.glue-effect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff9900;
+    border-radius: 50%;
+    opacity: 0.5;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+
+.glue-element.glued .glue-effect {
+    transform: translate(-50%, -50%) scale(1.5);
+}
